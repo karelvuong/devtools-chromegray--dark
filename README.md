@@ -28,6 +28,6 @@ curl -o ~/.config/google-chrome/Default/User\ StyleSheets/Custom.css https://raw
 
 ## Credits
 Thanks to:
-* [Zero Dark Matrix](https://github.com/mauricecruz/chrome-devtools-zerodarkmatrix-theme) by @mauricecruz as a starting point.
-* [Spacegray](https://github.com/kkga/spacegray) by @kkga for the theme.
-* [base16 Ocean](https://github.com/chriskempson/base16) by @chriskempson for the colour scheme.
+* [Zero Dark Matrix](https://github.com/mauricecruz/chrome-devtools-zerodarkmatrix-theme) by **[@mauricecruz](https://github.com/mauricecruz/)** as a starting point.
+* [Spacegray](https://github.com/kkga/spacegray) by **[@kkga](https://github.com/kkga/)** for the theme.
+* [base16 Ocean](https://github.com/chriskempson/base16) by **[@chriskempson](https://github.com/chriskempson/)** for the colour scheme.
