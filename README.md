@@ -1,4 +1,7 @@
 # Chromegray
+
+At the moment, there is only support for Chrome Stable v. 31.0.1650.57 m. Support for the Chrome Canary will be coming shortly.
+
 ### Chrome Stable
 Pick from the snippets below.
 
