@@ -8,6 +8,8 @@ A Chrome DevTools theme based on @kkga's Spacegray Sublime Text 2/3 UI theme and
 *  At the moment, there is only support for Chrome Stable v. 31.0.1650.57 m.
 *  Support for the Chrome Canary will be coming soon.
 
+![stnd](https://raw.github.com/karelvuong/chromegray/master/screens/stnd.png)
+
 ### Chrome Stable
 Pick from the snippets below.
 
