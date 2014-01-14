@@ -2,7 +2,7 @@
 
 A Chrome DevTools theme based on @kkga's Spacegray Sublime Text 2/3 UI theme and @chriskempson's base16 Ocean colour scheme.
 
-**A couple notes:** 
+**A couple notes:**
 *  This is an unofficial theme and can break the functionality of Chrome Developer Tools.
 *  This is still a work in progress.
 *  At the moment, there is only support for Chrome Stable v. 31.0.1650.57 m.
@@ -17,25 +17,25 @@ Pick from the snippets below.
 ##### Mac
 
 ```
-curl -o ~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/Custom.css https://raw.github.com/karel/chromegray/master/Custom.css
+curl -o ~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/Custom.css https://raw2.github.com/karelvuong/chromegray/master/Stable/Custom.css
 ```
 
 ##### PC (Windows Vista / 7 / 8)
 
 ```
-powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.github.com/karel/chromegray/master/Custom.css""","""$env:APPDATA\..\Local\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
+powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw2.github.com/karelvuong/chromegray/master/Stable/Custom.css""","""$env:APPDATA\..\Local\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
 ```
 
 ##### PC (Windows XP)
 
 ```
-powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.github.com/karel/chromegray/master/Custom.css""","""$env:APPDATA\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
+powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw2.github.com/karelvuong/chromegray/master/Stable/Custom.css""","""$env:APPDATA\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
 ```
 
 ##### Fedora:
 
  ```
-curl -o ~/.config/google-chrome/Default/User\ StyleSheets/Custom.css https://raw.github.com/karel/chromegray/master/Custom.css
+curl -o ~/.config/google-chrome/Default/User\ StyleSheets/Custom.css https://raw2.github.com/karelvuong/chromegray/master/Stable/Custom.css
  ```
 
 ## Credits
