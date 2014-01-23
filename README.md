@@ -1,4 +1,4 @@
-Themes for Chrome DevTools
-===================
+# Themes for Chrome DevTools
 
-An assortment of Chrome DevTools themes.
+#### Chromegray
+![long](https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/screens/long.jpg)
