@@ -8,8 +8,8 @@ A Chrome DevTools theme based on @kkga's Spacegray Sublime Text 2/3 UI theme and
 *  At the moment, there is only support for Chrome Stable v. 31.0.1650.57 m.
 *  Support for the Chrome Canary will be coming soon.
 
-![stnd](https://raw.github.com/karelvuong/chromegray/master/screens/stnd.jpg)
-![long](https://raw.github.com/karelvuong/chromegray/master/screens/long.jpg)
+![stnd](https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/screens/stnd.jpg)
+![long](https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/screens/long.jpg)
 
 ### Chrome Stable
 Pick from the snippets below.
@@ -17,25 +17,25 @@ Pick from the snippets below.
 ##### Mac
 
 ```
-curl -o ~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/Custom.css https://raw.github.com/karel/chromegray/master/Custom.css
+curl -o ~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/Custom.css https://raw.github.com/karel/themes-for-devtools/master/chromegray/Custom.css
 ```
 
 ##### PC (Windows Vista / 7 / 8)
 
 ```
-powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.github.com/karel/chromegray/master/Custom.css""","""$env:APPDATA\..\Local\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
+powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.github.com/karel/themes-for-devtools/master/chromegray/Custom.css""","""$env:APPDATA\..\Local\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
 ```
 
 ##### PC (Windows XP)
 
 ```
-powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.github.com/karel/chromegray/master/Custom.css""","""$env:APPDATA\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
+powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.github.com/karel/themes-for-devtools/master/chromegray/Custom.css""","""$env:APPDATA\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
 ```
 
 ##### Fedora:
 
  ```
-curl -o ~/.config/google-chrome/Default/User\ StyleSheets/Custom.css https://raw.github.com/karel/chromegray/master/Custom.css
+curl -o ~/.config/google-chrome/Default/User\ StyleSheets/Custom.css https://raw.github.com/karel/themes-for-devtools/master/chromegray/Custom.css
  ```
 
 ## Credits
