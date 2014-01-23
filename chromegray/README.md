@@ -6,8 +6,7 @@
 ![stnd](https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/screens/stnd.jpg)
 ![long](https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/screens/long.jpg)
 
-### Chrome Stable
-Pick from the snippets below.
+### Installation
 
 ##### Mac
 
