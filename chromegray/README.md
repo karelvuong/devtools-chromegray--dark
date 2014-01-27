@@ -8,6 +8,8 @@
 
 ### Installation
 
+You may install Chromegray using two methods. The first makes use of `grunt` and the second slightly lazier version will simply copy the compiled Custom.css file into your User StyleSheets directory. I would not recommend the second as the .css file may or may not be up to date.
+
 ##### Mac
 
 ```
