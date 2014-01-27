@@ -1,12 +1,12 @@
 // ----------------------------------------------------------------------------
 // Chromegray
 // https://github.com/kareluong/chromegray
-// ----------------------------------------------------------------------------
 // http://chriskempson.github.io/base16/#ocean
+// ----------------------------------------------------------------------------
 
 ///// Gradient          
 $c11: #232830;           
-$c10: #1C1F26;    ///// Colours!
+$c10: #1C1F26;    ///// Colours
 $c00: #2B303B;    $c08: #BF616A;
 $c01: #343D46;    $c09: #D08770;
 $c02: #4F5B66;    $c0A: #EBCB8B;
@@ -27,7 +27,17 @@ $line-highlight: $c01;
 }
 
 #-blink-dev-tools {
-  /* READABILITY */
+	/*
+	 * If you would like to change the font family or size, you may do so here.
+	 */
+	* {
+		font: {
+			family: inherit;
+			size: inherit !important;
+	    } 
+	}
+
+  // READABILITY
   .outline-disclosure ol li,
   .text-editor .inner-container .webkit-line-content,
   .text-editor-lines .inner-container .webkit-line-number,
@@ -36,10 +46,6 @@ $line-highlight: $c01;
   #search-results-pane-file-based .search-match {
     line-height: 14px !important;
   }
-
-
-
-
 
 
 
