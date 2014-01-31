@@ -460,14 +460,15 @@ $line-highlight: $c01;
 
     .console-message {
       color: #cccccc !important;
+      
+      .bubble {
+        text-shadow: 0 0 1px rgba(0, 0, 0, 0.4) !important;
+      }
     }
   }
 
   .console-group-messages .section .header .title {
     color: #cccccc !important;
-  }
-  .console-message .bubble {
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.4) !important;
   }
   .bubble.debug,
   .console-debug-level .bubble {
