@@ -2,8 +2,8 @@
 
 **This is an unofficial theme and can break the functionality of Chrome Developer Tools.**
 
-![stnd](https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/screens/stnd.jpg)
-![long](https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/screens/long.jpg)
+![stnd](https://raw.githubusercontent.com/karelvuong/chromegray--dark/master/screens/stnd.jpg)
+![long](https://raw.githubusercontent.com/karelvuong/chromegray--dark/master/screens/long.jpg)
 
 ### Installation
 
