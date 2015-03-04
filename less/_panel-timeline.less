@@ -1,0 +1,227 @@
+/**********************************************
+/* Timeline Tab
+/**********************************************/
+
+//timeline status (capture stacks text)
+.timeline .panel-status-bar{
+	color: @global-text !important;
+}
+
+.timeline-category-statusbar-item,
+.timeline-records-stats,
+.record-title,
+.timeline-aggregated-category {
+	text-shadow: none !important;
+	color: @global-text !important;
+}
+
+#timeline-graphs .timeline-graph-side {
+
+	&.hovered {
+		background-color: @global-hover !important;
+		outline: 1px solid @- !important; .contrast(@global-hover, 10%);
+	}
+
+	&.selected {
+		background-color: @selection-background !important;
+		outline: 1px solid @selection-border !important;
+	}
+}
+
+.timeline-records-list .timeline-tree-item {
+	color: @global-text !important;
+
+	&.hovered:not(.selected) {
+		&:extend(#timeline-graphs .timeline-graph-side.hovered);
+	}
+
+	&.selected {
+		&:extend(#timeline-graphs .timeline-graph-side.selected);
+	}
+
+	.data.dimmed {
+		color: @global-text !important;
+		opacity: .7 !important;
+	}
+}
+
+/* Timeline */
+.sidebar-tree-section {
+	text-shadow: none !important;
+}
+
+.timeline-tree-item.selected .timeline-tree-item-expand-arrow,
+.timeline-tree-item-expand-arrow {
+	background-color: @global-arrow !important;
+}
+
+#counter-values-bar,
+#memory-graphs-container .sidebar-tree-section,
+.timeline-records-title,
+.timeline-details-view-title {
+	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom);
+	color: @global-text !important;
+	text-shadow: none !important;
+}
+
+#counter-values-bar {
+	position: relative !important;
+	top: 1px !important;
+	border-bottom: none !important;
+}
+
+.timeline-aggregated-info-legend > div,
+.memory-counter-sidebar-info {
+	color: @global-text !important;
+}
+
+.timeline-details-view-row-title {
+	color: @- !important; .contrast(@global-background, 25%);
+}
+
+.timeline-details-view-title {
+	border-bottom: none !important;
+}
+
+.timeline-details-view-row-value,
+.timeline-details-view-row-stack-trace {
+	color: @global-text !important;
+}
+
+.timeline-details-view-row .timeline-details-view-row-stack-trace .webkit-html-resource-link {
+	color: @xml-link !important;
+}
+
+#timeline-overview-sidebar {
+	padding-right: 0 !important;
+	border-right: 1px solid @global-background !important;
+
+	.sidebar-tree-item {
+		&:hover {
+			border-left: 6px solid @hover-border !important;
+		}
+
+		&.selected {
+			border-left: 6px solid @selection-border !important;
+
+			.icon {
+				background-color: @selection-text !important;
+			}
+
+			.title {
+				color: @selection-text !important;
+			}
+		}
+	}
+
+	.icon {
+		background-color: @- !important; .contrast(@global-text, 10%, invert);
+	}
+
+	.title {
+		color: @- !important; .contrast(@global-text, 10%, invert);
+	}
+
+}
+
+.timeline-cpu-curtain-left,
+.timeline-cpu-curtain-right {
+	background-color: @global-text !important;
+	opacity: 0.3 !important;
+}
+
+.timeline-expandable {
+	border-left: 1px solid @timeline-expandable-border !important;
+}
+
+.timeline-expandable-left{
+	border-top: 1px solid @timeline-expandable-border !important;
+	border-bottom: 1px solid @timeline-expandable-border !important;
+}
+
+.timeline-utilization-strip .timeline-graph-bar {
+	border-color: @timeline-graph-bar !important;
+	background-color: @timeline-graph-bar-background !important;
+}
+
+#timeline-overview-panel {
+	border-bottom: 1px solid @tab-color-top !important;
+}
+
+.timeline .resources-event-divider.timeline-frame-divider,
+.resources-divider {
+	background-color: @timeline-resources-divider !important;
+}
+
+.panel:not(.network) .resources-dividers-label-bar {
+	background: transparent !important;
+	border-bottom:1px solid @- !important; .contrast(@tab-color-bottom, 10%, invert);
+}
+
+.panel:not(.network) #timeline-grid-header .resources-dividers-label-bar {
+	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+}
+
+.overview-grid-dividers-background {
+	background-color: red !important;
+}
+
+#timeline-overview-container {
+	background-color: @timeline-overview-background !important;
+
+	canvas {
+		background-color: transparent !important;
+	}
+}
+
+.overview-grid-window-resizer {
+	box-shadow: none !important;
+}
+
+.overview-grid-window-rulers {
+	border-right: 1px solid @timeline-graph-selection;
+	border-left: 1px solid @timeline-graph-selection;
+	background: @timeline-graph-selection !important;
+	opacity: 0.2 !important;
+}
+
+.timeline-frame-strip {
+	color: @global-text !important;
+}
+
+.overview-grid-dividers-background {
+	background-color: @- !important; .contrast(@global-background, 5%);
+}
+
+.overview-grid-window {
+	background-color: @global-background !important;
+}
+
+#memory-counters-graph {
+	border-right: 1px solid @- !important; .contrast(@global-background, 3%);
+}
+
+.timeline-frame-container {
+	background: none !important;
+}
+
+// Timeline recording options labels [Capture memory|stacks]
+#timeline-overview-panel .split-view-sidebar > label {
+	color: @global-text !important;
+}
+
+// label above pie chart
+.timeline-range-summary > div {
+	color: @global-text !important;
+}
+
+// piechart text
+.pie-chart-foreground {
+	color: #222;
+}
+
+// overlay while timeline is collecting events
+.timeline-progress-pane {
+	background-color: @timeline-progress-pane !important;
+	color: @global-text !important;
+}

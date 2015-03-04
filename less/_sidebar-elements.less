@@ -1,0 +1,121 @@
+/**********************************************
+/* Elements/Sources Right Sidebar
+/**********************************************/
+
+.styles-section {
+	padding: 4px 0 !important;
+	margin: 0 10px;
+	border-top: 1px solid @style-separator !important;
+	border-bottom: none !important;
+
+	&:first-child{
+		border-top: none !important;
+	}
+
+	// Elements CSS Sidebar Readonly
+	&.read-only:not(.computed-style){
+		background-color: @- !important; .contrast(@global-background, 5%);
+		margin: 0;
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
+
+	.value {
+		color: @style-value !important;
+	}
+
+	.child-editing,
+	.header .subtitle {
+		color: @style-edit-mode-selector-text !important;
+	}
+
+	.properties {
+
+		.overloaded,
+		.inactive ,
+		.disabled ,
+		.not-parsed-ok {
+			opacity: .5 !important;
+		}
+	}
+
+}
+
+//event listener children
+.event-bars .event-bar .header .title {
+	text-shadow:none !important;
+	color:@global-text !important;
+}
+
+.sidebar-pane {
+
+	.body,
+	.monospace {
+		color: @style-selector-text !important;
+	}
+
+	.section.expanded {
+
+		// Elements -> Event Listeners
+		> .header {
+			border-bottom: 1px solid @- !important; .contrast(@tab-color-bottom, 10%, invert);
+		}
+
+		// Sources -> Watch Expressions
+		> .properties-tree {
+			background-color: @- !important; .contrast(@global-background, 2%);
+		}
+	}
+
+	/*-- METRICS--*/
+	.body .metrics {
+		color: #000 !important;
+		& { border-top: 1px solid @- !important; .contrast(@global-background, 5%) };
+		& { border-bottom: 1px solid @- !important; .contrast(@global-background, 5%) };
+		margin-top: 5px !important;
+
+		.position,
+		.margin:not([style^=background-color]),
+		.border:not([style^=background-color]),
+		.padding:not([style^=background-color]),
+		.margin:not([style^=background-color]),
+		.content:not([style^=background-color]){
+			background-color: #888 !important;
+		}
+	}
+
+	.section:first-child {
+		border-top: none !important;
+	}
+}
+
+.styles-section.first-styles-section,
+.sidebar-separator + .styles-section {
+ border-top: none !important;
+}
+
+.sidebar-separator {
+	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	color: @style-selector-text !important;
+	text-shadow: none !important;
+	border-top: none !important;
+	border-bottom: none !important;
+}
+
+/*-- PSEUDO STATE DISPLAY --*/
+.styles-element-state-pane {
+	background: @- !important; .contrast(@global-background,6%);
+	padding: 4px 0 !important;
+	border-bottom: 1px solid rgba(255,255,255,.1) !important;
+}
+
+.styles-element-state-pane.expanded {
+	margin-top: 0 !important;
+}
+
+.sidebar-pane-stack .event-category,
+.sidebar-pane .section {
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 7%) };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 7%, invert) };
+	margin-top: 0 !important;
+}

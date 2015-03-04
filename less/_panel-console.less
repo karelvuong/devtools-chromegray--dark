@@ -1,0 +1,133 @@
+/**********************************************/
+/* Console
+/**********************************************/
+
+
+.debug-type(@level,@color) {
+
+	.@{level} {
+		.console-message-text,
+		.console-message-url {
+			color: @color !important;
+		}
+
+		.children div:hover * {
+			color: @- !important; .contrast(@color, 5%, invert) !important;
+		}
+
+		.section > .header .title {
+			color: @color !important;
+		}
+
+		// remove .bubble after v.38
+		.bubble,
+		.bubble-repeat-count {
+			background-color: @color !important;
+		}
+	}
+}
+
+// console frame
+#console-messages {
+	border-top: none !important;
+}
+
+.console-message {
+	border-bottom: none !important;
+
+}
+
+//message line spacing
+.console-message-wrapper {
+	margin: 1px 0;
+}
+
+.console-status-bar {
+	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	box-shadow: inset 0 1px 0 lighten(@tab-color-top,7%), inset 0 -1px 0 darken(@tab-color-bottom,10%);
+	border-bottom: none !important;
+}
+
+#console-prompt {
+	color: @console-input-text !important;
+	border-top: none !important;
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 5%) };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 10%) };
+}
+
+// user input
+.console-user-command {
+	border-top: none !important;
+	border-bottom: none !important;
+	width: 100% !important;
+
+}
+
+#console-messages .console-user-command > .console-message-text {
+	vertical-align: text-top !important;
+}
+
+.console-adjacent-user-command-result {
+	& { background-color: @- !important; .contrast(@global-background, 2%) };
+	& { border-top: 1px solid @- !important; .contrast(@global-background, 3%) };
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 2%, invert) };
+}
+
+// results with tree navigation
+.console-message .children li,
+.console-user-command .children li {
+	 margin: 1px 0 !important;
+}
+
+#console-messages {
+
+	.console-user-command > .console-message-text {
+		color: @console-default-text !important;
+	}
+
+	.debug-type(console-debug-level, @filter-debug);
+	.debug-type(console-log-level, @filter-log);
+	.debug-type(console-warning-level, @filter-warning);
+	.debug-type(console-error-level, @filter-error);
+	.debug-type(console-info-level, @filter-info);
+
+	// Children Hover
+		.outline-disclosure .stacktrace-entry:hover {
+			background-color: @- !important; .contrast(@global-background, 1%); 
+	}
+
+	a {
+		color: @console-link !important;
+
+		&:hover {
+			color: @- !important; .contrast(@console-link, 5%);
+		}
+	}
+
+	// position adjustment of error icon
+	.console-error-level::before {
+		top: 9px !important;
+	}
+}
+
+#console-messages .console-message {
+	color: @console-default-text !important;
+}
+
+//repeated item
+.console-message .bubble {
+	text-shadow: 0 0 1px rgba(0,0,0,.8) !important;
+}
+
+.console-formatted-node:hover {
+	background: fade(@global-hover, 50%) !important;
+}
+
+//text of devices panel
+.vbox.devices {
+	color: @global-text !important;
+
+	a {
+		color: @global-accent;
+	}
+}

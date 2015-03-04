@@ -1,40 +1,47 @@
 # Chromegray
 
-**This is an unofficial theme and can break the functionality of Chrome Developer Tools.**
+A Chrome DevTools theme based on @kkga's Sublime Text theme, Spacegray.
 
-![stnd](https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/screens/stnd.jpg)
-![long](https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/screens/long.jpg)
 
-### Installation
+# Contributing
 
-You may install Chromegray using two methods. The first makes use of `grunt` and the second slightly lazier version will simply copy the compiled Custom.css file into your User StyleSheets directory. I would not recommend the second as the .css file may or may not be up to date.
+Chromegray is built on LESS. Grunt is used to listen for changes to LESS files and generates CSS. This means [Node](http://nodejs.org/) is required.
 
-##### Mac
 
-```
-curl -o ~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/Custom.css https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/stylesheets/css/Custom.css
-```
+## Getting Started
 
-##### PC (Windows Vista / 7 / 8)
+1. Clone this repo: `git clone https://github.com/mauricecruz/zero-base-themes.git`.
 
-```
-powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/stylesheets/css/Custom.css""","""$env:APPDATA\..\Local\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
-```
+2. Install dependencies: `npm install`.
 
-##### PC (Windows XP)
+3. To use an existing theme: `grunt`. (If you're going to work on your own theme: `grunt watch` to listen for changes).
 
-```
-powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/stylesheets/css/Custom.css""","""$env:APPDATA\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
-```
+4. `Chrome > Preferences... > Extensions > DevTools Theme: Zero Dark Matrix = Enabled` (also enable `Allow incognito` below if you wish).
 
-##### Fedora:
+5. chrome://flags (make sure `Enable Developer Tools experiments` is enabled).
 
- ```
-curl -o ~/.config/google-chrome/Default/User\ StyleSheets/Custom.css https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/stylesheets/css/Custom.css
- ```
+6. In Chome Dev Tools > Settings (cog icon or `Shift+?`) > Experiments > Allow custom UI themes.
 
-## Credits
-Thanks to:
-* [Zero Dark Matrix](https://github.com/mauricecruz/chrome-devtools-zerodarkmatrix-theme) by **[@mauricecruz](https://github.com/mauricecruz/)** which was used as a starting point.
-* [Spacegray](https://github.com/kkga/spacegray) by **[@kkga](https://github.com/kkga/)** for the theme that was used as inspiration for this.
-* [base16 Ocean](https://github.com/chriskempson/base16) by **[@chriskempson](https://github.com/chriskempson/)** for the syntax highlighting colour scheme.
+7. Sometimes it's required to close and reopen the dev tools.
+
+
+## Contributing to Template Source
+
+All template files are located in the `/less` directory. Files beginning with an `_` indicate template partials. They are imported via `build.less`. Any addition/removal of template partials should be reflected in the build file.
+
+
+## Changing Themes
+
+Copy `/themes/_theme-template.less` and modify color values accordingly. Rename the file and save in the `/themes` directory. Specify the theme of your choice in `config.less`.
+
+# About Canary
+
+As of Version v. **33.0.1726.0**, themes only work via extensions and the developer tools experiments.
+
+There is a [thread detailing how this method came about.](https://code.google.com/p/chromium/issues/detail?can=4&start=0&num=100&q=&colspec=ID%20Pri%20M%20Iteration%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified&groupby=&sort=&id=318566).  Feel free to voice your opinions there.
+
+***
+
+## Additional Resources
+
+Blog post and screencast showing how to get up and running and create your own theme as well http://s10wen.com/blog/2014/03/12/chrome-dev-tools-theming-with-zero-base-themes/

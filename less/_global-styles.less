@@ -1,0 +1,102 @@
+/**********************************************
+/* DevTool Chrome
+/**********************************************/
+
+//GLOBAL BACKGROUND COLOR
+#console-messages,
+#console-view,
+#network-views .CodeMirror-lines,
+#script-view-fallback,
+.console-view-wrapper,
+.dialog .fill,
+.drawer .revision-history-drawer,
+.help-window-main,
+.panel .split-view-contents,
+.panel,
+.panel-enabler-view,
+.profiles-sidebar-tree-box,
+.resource-view .script-view, // network -> response bg
+.sidebar-overlay,
+.split-view-vertical .sidebar-pane.composite .properties-tree,
+.styles-section.read-only,
+.tabbed-pane-content,
+.tabbed-pane-content.has-no-tabs
+.timeline-records-title,
+.timeline-records-list,
+#timeline-overview-sidebar {
+	background-color: @global-background !important;
+	z-index: 0;
+}
+
+//Panel text
+.panel-enabler-view {
+	color: @global-text;
+}
+
+// Panel Tree Selections
+.panel {
+
+	.sidebar-tree-item {
+
+		&.selected {
+			background-color: @selection-background !important;
+			color: @selection-text !important;
+			box-shadow: inset 0 1px 0 0 @selection-border, inset 0 -1px 0 0 @selection-border;
+		}
+
+		&:not(.selected):hover {
+			background-color: @hover-background !important;
+			color: @hover-text !important;
+			box-shadow: inset 0 1px 0 0 @hover-border, inset 0 -1px 0 0 @hover-border;
+		}
+
+		.disclosure-button {
+			background-color: @global-arrow !important;
+		}
+
+	}
+
+	.data-grid th {
+		border: none !important;
+	}
+
+	.status-bar {
+		border-bottom: 1px solid @tab-color-top;
+	}
+
+	.status-bar-text {
+		color: @global-text !important;
+	}
+}
+
+body.dock-to-right.inactive:not(.undocked):not(.overlay-contents),
+body.dock-to-right:not(.undocked):not(.overlay-contents) {
+	border-left: transparent !important;
+}
+
+.split-view.vbox > .split-view-sidebar.split-view-contents-second:not(.maximized) {
+	border-top: none !important;
+}
+
+// Buttons
+.tabbed-pane-content .settings-tab-text-button {
+	.button-styles();
+}
+
+// Remove border lines
+.split-view.vbox > .split-view-resizer > .split-view-resizer-border,
+.split-view.hbox > .split-view-resizer > .split-view-resizer-border {
+	border: none !important;
+}
+
+// Remove background from sidebars
+.sidebar {
+	background: none !important;
+}
+
+// Editing Dom Nodes or Snippet Filenames
+.editing {
+	background-color: @global-background !important;
+	outline: 1px solid @eh-editing-outline !important;
+	color: @global-text !important;
+}

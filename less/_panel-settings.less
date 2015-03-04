@@ -1,0 +1,183 @@
+/*************************************
+ * Help/Settings Overlay
+ *************************************/
+
+.help-window-main {
+	color: @global-text !important;
+
+	.settings-tab-container header {
+		border-bottom: 1px solid @- !important; .contrast(@global-background, 30%) !important;
+	}
+
+	.help-footnote {
+		border-top: 1px solid @- !important; .contrast(@global-background, 30%) !important;
+	}
+
+	label,
+	label:hover {
+		color: @form-label-text !important;
+	}
+
+	.tabbed-pane-header-tab.selected {
+		color: @global-accent !important;
+	}
+
+	.help-section-title {
+		color: @global-accent !important;
+	}
+
+	.help-block {
+
+		label,
+		td {
+			color: @form-label-text !important;
+		}
+
+	}
+
+	select,
+	input,
+	option {
+		.input-styles();
+	}
+
+	//disabled styles
+	fieldset:disabled label {
+		color: fade(@form-label-text, 30%) !important;
+	}
+
+	select:disabled,
+	input:disabled,
+	.settings-tab-text-button:disabled {
+		background-image: none !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	//keyboard shortcuts display
+	.help-key-cell {
+
+		.help-key {
+			color: @settings-text !important;
+		}
+		span {
+			color: @settings-delimiter !important;
+		}
+	}
+
+	/***************************************************
+	/* Workspaces Dialog Box
+	****************************************************/
+
+	.settings-list-container {
+		padding: 10px !important;
+		background-color: @settings-folder-background !important;
+	}
+
+	.settings-list {
+		border: 1px solid @settings-border !important;
+	}
+
+	.settings-list-item {
+		& { background-color: @- !important; .contrast(@global-background, 5%) };
+		& { border-top: 1px solid @- !important; .contrast(@tab-color-top,7%) };
+		& { border-bottom: 1px solid @- !important; .contrast(@tab-color-bottom,10%, invert) };
+
+		&:hover {
+			&:extend(.settings-list-item);
+		}
+
+		&.selected {
+			background-color: @settings-selected !important;
+		}
+
+		&:nth-child(1) {
+			border-top: none !important;
+		}
+
+		&:last-child{
+			border-bottom: none !important;
+		}
+	}
+
+	.file-system-path-name {
+		color: @global-accent !important;
+	}
+}
+
+.file-system-path,
+.list-column-text,
+.settings-list-column-path {
+	color: @global-text !important;
+}
+
+// workspace edit input boxes
+.list-column-editor {
+	background-color: @form-input-background !important;
+	border: 1px solid @form-input-border !important;
+	color: @form-input-text !important;
+}
+
+
+
+
+.settings-dialog {
+	border: 1px solid @settings-border !important;
+	background-color: @settings-edit-background !important;
+	border-radius: 4px !important;
+
+	.dialog-contents {
+
+		label {
+			color: @global-text;
+		}
+
+		.header {
+			color: @settings-delimiter !important;
+		}
+
+		.block-header {
+			color: @global-accent !important;
+		}
+	}
+
+	.settings-list-container {
+		background-color: @settings-background !important;
+	}
+
+	.settings-list {
+		border-color: @settings-background !important;
+		border-radius: 2px !important;
+	}
+
+	.settings-list-item {
+		background-color: @settings-background !important;
+		& { border-top: 1px solid @- !important; .contrast(@tab-color-top, 7%) }; /* testsasdf */
+		& { border-bottom: 1px solid @- !important; .contrast(@tab-color-bottom, 10%, invert) }; /* testsasdf */
+		color: @settings-text !important;
+
+		&:hover {
+			&:extend(.settings-list-item);
+		}
+	}
+
+	.add-list-item {
+		border-bottom: none !important;
+	}
+
+	.file-mappings-list .settings-list-item:first-child,
+	.excluded-folders-section .settings-list-item:first-child {
+		border-top: none !important;
+	}
+}
+
+// Make swatch size 12px again.
+.swatch {
+	width: 12px !important;
+	height: 12px !important;
+}
+
+// Framework blackbox patterns
+.blackbox-dialog .columns-header {
+	color: @global-accent !important;
+}

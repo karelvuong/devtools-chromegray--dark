@@ -1,0 +1,56 @@
+/**********************************************
+/* Resources Tab
+/**********************************************/
+.resources-status-bar .status-bar{
+	background: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	box-shadow: inset 0 1px 0 @- !important; .contrast(@tab-color-top,7%);
+	border-top: none !important;
+}
+
+/*-- WEB SQL --*/
+.database-query-prompt {
+	color: @global-text !important;
+}
+
+.database-user-query {
+	border-top: 1px solid @global-background !important;
+	border-bottom: 1px solid @- !important; .contrast(@global-background, 10%, invert) !important;
+	padding-bottom: 10px !important;
+}
+
+.database-user-query + span {
+	padding: 2px 0 !important;
+	border-top: 1px solid @global-background !important;
+	& { border-bottom: 1px solid @- !important; .contrast(@global-background, 10%, invert) !important };
+	& { background-color: @- !important; .contrast(@global-background, 2%) !important };
+	width: 100% !important;
+}
+
+.database-user-query .database-query-text {
+	color: @global-text !important;
+	width: 100% !important;
+	display: inline-block !important;
+	margin-bottom: 5px;
+	margin-top: 2px;
+}
+
+.database-user-query::before,
+ .database-query-result::before{
+	margin-top: -5px !important;
+ }
+
+.database-user-query .error {
+	color: @global-error !important;
+}
+
+// indexdb node
+.indexed-db-database-view .outline-disclosure {
+
+	.attribute-name {
+		color: @global-label !important;
+	}
+
+	.attribute-value {
+		color: @global-text !important;
+	}
+}

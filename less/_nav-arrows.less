@@ -1,0 +1,85 @@
+/**********************************************/
+/* Navigation Arrows
+/**********************************************/
+
+.arrow-styles() {
+	background-color: @global-arrow !important;
+	background-image: none !important;
+	-webkit-mask-image: url(Images/statusbarButtonGlyphs.png) !important;
+	-webkit-mask-position: -4px -96px !important;
+	-webkit-mask-repeat: no-repeat !important;
+	color: rgba(0,0,0,0) !important;
+	opacity: 1 !important;
+}
+
+ // hide/expand point arrow down
+.styles-section.matched-styles .properties li.parent.expanded .expand-element,
+#console-messages .console-group-messages .section.expanded .header::before,
+#console-messages .properties-tree li.parent.expanded::before,
+.outline-disclosure li.parent.expanded::before,
+.properties-tree li.parent.expanded::before,
+.section.expanded > .header::before,
+.section .event-bar.expanded .header::before,
+.sidebar-pane .parent.expanded::before,
+.sidebar-pane-stack .sidebar-pane-title.expanded::before,
+.timeline-expandable-expanded .timeline-expandable-arrow {
+	.arrow-styles;
+}
+
+// hide/expand arrow point right
+.styles-section.matched-styles .properties li.parent .expand-element,
+#console-messages .console-group-messages .section .header::before,
+#console-messages .properties-tree li.parent::before,
+.outline-disclosure li.parent::before,
+#search-results-pane-file-based .parent::before,
+.properties-tree li.parent::before,
+.section > .header::before,
+.section .event-bar .header::before,
+.sidebar-pane .parent::before,
+.sidebar-pane-stack .sidebar-pane-title::before,
+.timeline-expandable-collapsed .timeline-expandable-arrow {
+	.arrow-styles;
+}
+
+// sort arrows point down
+.data-grid th.sort-ascending > div::after {
+	.arrow-styles;
+	-webkit-mask-position: -4px -108px !important;
+}
+
+// sort arrows point up
+.data-grid th.sort-descending > div::after {
+	.arrow-styles;
+	-webkit-mask-position: -20px -96px !important;
+}
+
+// BUG??: Arrows don't rotate in find module
+#search-results-pane-file-based .parent.expanded::before{
+	-webkit-mask-position: -20px -96px !important;
+}
+
+// Drawer find arrow trees showing more sprite area than normal
+#search-results-pane-file-based .parent.expanded::before {
+	-webkit-mask-position: -20px -93px !important;
+}
+
+#search-results-pane-file-based .parent::before {
+	-webkit-mask-position: -4px -93px !important;
+}
+
+// Adjust position of
+// - network headers section arrows
+.panel.network .outline-disclosure li.parent::before{
+	top: 3px !important;
+}
+// - event listener arrows
+.sidebar-tabbed-pane .section > .header::before,
+.event-bars .event-bar .header::before {
+	margin-top: 3px !important;
+}
+
+// selectbox arrows
+.status-bar-select-arrow {
+	.arrow-styles;
+	-webkit-mask-position: -20px -96px !important;
+}

@@ -1,0 +1,51 @@
+// Global Button Styles
+.button-styles() {
+	background-image: @form-button-background !important;
+	color: @form-button-text !important;
+	border: 1px solid @form-button-border !important;
+	border-radius: 3px !important;
+	cursor: pointer !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+
+	&:disabled {
+		cursor: default !important;
+		opacity: .3 !important
+	}
+
+	&:not(:disabled):active {
+		box-shadow: @form-button-pressed !important;
+	}
+}
+
+.input-styles() {
+	background-color: @form-input-background !important;
+	border-color: @form-input-border !important;
+	color: @form-input-text !important;
+
+	&:disabled {
+		opacity: .3 !important;
+	}
+
+	&:focus {
+		outline-color: none !important;
+	}
+}
+
+.highlight(@type) when (@type = hover) {
+	background-color: @global-hover !important;
+	box-shadow: inset 0 1px 0 0 @hover-border, inset 0 -1px 0 0 @hover-border;
+}
+
+.highlight(@type) when (@type = selection) {
+	background-color: @global-selected !important;
+	box-shadow: inset 0 1px 0 0 @selection-border, inset 0 -1px 0 0 @selection-border;
+}
+
+.contrast(@color, @percent, @invert: false) when (@invert = false) and (@theme-type = dark), (@invert = invert) and (@theme-type = light) {
+	@-: lighten(@color, @percent);
+}
+
+.contrast(@color, @percent, @invert: false) when (@invert = false) and (@theme-type = light), (@invert = invert) and (@theme-type = dark) {
+	@-: darken(@color, @percent);
+}

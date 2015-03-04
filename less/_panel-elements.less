@@ -1,0 +1,48 @@
+/**********************************************
+/* Element - Edit HTML
+/**********************************************/
+
+.source-code .CodeMirror{
+	outline: none !important;
+	border: 1px solid @- !important; .contrast(@global-background, 5%);
+	border-radius: 5px;
+	margin: 10px 0;
+	padding: 10px 0 0 10px !important;
+	color: @global-text !important;
+}
+
+
+/**********************************************
+/* Element Highlighter
+/**********************************************/
+
+// overquality to override chrome selector
+.panel.elements #elements-content .CodeMirror {
+  outline: none !important;
+}
+
+.panel.elements,
+.panel.console {
+
+	.outline-disclosure {
+
+		ol:focus li.selected .selection,
+		li.selected .selection {
+			outline: 1px solid @eh-highlight-outline !important;
+			background-color: @eh-highlight-background !important;
+		}
+
+		li.hovered:not(.selected) .selection {
+			border-radius: 0 !important;
+			background-color: @eh-hover-background !important;
+			border-top: 1px solid @eh-hover-outline !important;
+			border-bottom: 1px solid @eh-hover-outline !important;
+		}
+
+	}
+}
+
+// cut/copy highlighter
+.outline-disclosure li.in-clipboard .highlight {
+	outline: 1px dashed @eh-clipboard-selection !important;
+}
