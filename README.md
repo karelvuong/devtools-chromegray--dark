@@ -2,55 +2,20 @@
 
 A Chrome DevTools theme based on @kkga's Sublime Text theme, Spacegray.
 
-<<<<<<< HEAD
-=======
-![stnd](https://raw.githubusercontent.com/karelvuong/chromegray--dark/master/screens/stnd.jpg)
-![long](https://raw.githubusercontent.com/karelvuong/chromegray--dark/master/screens/long.jpg)
->>>>>>> origin/master
 
 # Contributing
 
 Chromegray is built on LESS. Grunt is used to listen for changes to LESS files and generates CSS. This means [Node](http://nodejs.org/) is required.
 
 
-<<<<<<< HEAD
 ## Getting Started
-=======
-```
-curl -o ~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/Custom.css https://raw.githubusercontent.com/karelvuong/chromegray--dark/master/stylesheets/css/Custom.css
-```
->>>>>>> origin/master
 
 1. Clone this repo: `git clone https://github.com/mauricecruz/zero-base-themes.git`.
-
-<<<<<<< HEAD
 2. Install dependencies: `npm install`.
-=======
-```
-powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.githubusercontent.com/karelvuong/chromegray--dark/master/stylesheets/css/Custom.css""","""$env:APPDATA\..\Local\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
-```
->>>>>>> origin/master
-
 3. To use an existing theme: `grunt`. (If you're going to work on your own theme: `grunt watch` to listen for changes).
-
-<<<<<<< HEAD
 4. `Chrome > Preferences... > Extensions > DevTools Theme: Zero Dark Matrix = Enabled` (also enable `Allow incognito` below if you wish).
-=======
-```
-powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.githubusercontent.com/karelvuong/chromegray--dark/master/stylesheets/css/Custom.css""","""$env:APPDATA\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
-```
->>>>>>> origin/master
-
 5. chrome://flags (make sure `Enable Developer Tools experiments` is enabled).
-
-<<<<<<< HEAD
 6. In Chome Dev Tools > Settings (cog icon or `Shift+?`) > Experiments > Allow custom UI themes.
-=======
- ```
-curl -o ~/.config/google-chrome/Default/User\ StyleSheets/Custom.css https://raw.githubusercontent.com/karelvuong/chromegray--dark/master/stylesheets/css/Custom.css
- ```
->>>>>>> origin/master
-
 7. Sometimes it's required to close and reopen the dev tools.
 
 
