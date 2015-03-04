@@ -12,25 +12,25 @@ You may install Chromegray using two methods. The first makes use of `grunt` and
 ##### Mac
 
 ```
-curl -o ~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/Custom.css https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/stylesheets/css/Custom.css
+curl -o ~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/Custom.css https://raw.githubusercontent.com/karelvuong/chromegray--dark/master/stylesheets/css/Custom.css
 ```
 
 ##### PC (Windows Vista / 7 / 8)
 
 ```
-powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/stylesheets/css/Custom.css""","""$env:APPDATA\..\Local\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
+powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.githubusercontent.com/karelvuong/chromegray--dark/master/stylesheets/css/Custom.css""","""$env:APPDATA\..\Local\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
 ```
 
 ##### PC (Windows XP)
 
 ```
-powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/stylesheets/css/Custom.css""","""$env:APPDATA\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
+powershell -Command "& {(new-object System.Net.WebClient).DownloadFile(""https://raw.githubusercontent.com/karelvuong/chromegray--dark/master/stylesheets/css/Custom.css""","""$env:APPDATA\Google\Chrome\User Data\Default\User StyleSheets\Custom.css""")}"
 ```
 
 ##### Fedora:
 
  ```
-curl -o ~/.config/google-chrome/Default/User\ StyleSheets/Custom.css https://raw.github.com/karelvuong/themes-for-devtools/master/chromegray/stylesheets/css/Custom.css
+curl -o ~/.config/google-chrome/Default/User\ StyleSheets/Custom.css https://raw.githubusercontent.com/karelvuong/chromegray--dark/master/stylesheets/css/Custom.css
  ```
 
 ## Credits
