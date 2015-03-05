@@ -1,7 +1,8 @@
-//**********************************************/
-//* 40.0.2191
-//**********************************************/
-// Fixes for elements panel content that is now inside shadow dom.
+html /deep/ .platform-mac .monospace, html /deep/ .platform-mac .source-code {
+  font-size: @font-size !important;
+  font-family: @font-family !important;
+  line-height: @text-height;
+}
 
 //_syntax.less
 body {
@@ -79,8 +80,8 @@ body {
 	// _global_styles
 	::shadow {
 		.editing {
-			background-color: @global-background !important;
-			outline: 1px solid @eh-editing-outline !important;
+			background-color: @tab-background-color !important;
+			outline: none !important;
 			color: @global-text !important;
 		}
 	}
@@ -180,6 +181,7 @@ body {
 		.webkit-css-important {color:@css-important!important;}
 		.webkit-css-keyword {color:@css-def!important;}
 		.webkit-css-number {color:@css-number!important;}
+		.styles-section .selector {color:@style-selector!important;}
 		.webkit-css-property,
 		.styles-section .properties > li .webkit-css-property {color:@css-property!important;font-weight:400;}
 		.webkit-css-string {color:@css-string!important;}
@@ -340,8 +342,8 @@ body {
 
 		// Editing Dom Nodes or Snippet Filenames
 		.editing {
-			background-color: @global-background !important;
-			outline: 1px solid @eh-editing-outline !important;
+			background-color: @tab-background-color !important;
+			outline: none !important;
 			color: @global-text !important;
 		}
 
@@ -354,6 +356,15 @@ body {
 			margin: 10px 0;
 			padding: 10px 0 0 10px !important;
 			color: @global-text !important;
+		}
+
+		.outline-disclosure li.hovered:not(.selected) .selection {
+		  background-color: transparent !important;
+		  border-radius: 0 !important;
+		}
+		.outline-disclosure ol:focus li.selected .selection,
+		.outline-disclosure li.selected .selection {
+			background-color: #323A43 !important;
 		}
 
 		//scrollbars
@@ -483,31 +494,51 @@ body {
 
 }
 
-// elements-child-highlighter
-.show-child-highlighter(@choice) when (@choice = true) {
-	.panel.elements {
-		/deep/ .parent {
-			// highlight children
-			&.selected.expanded + .children,
-			&.hovered.expanded + .children {
-				// background-color: #323A43 !important;
-				// padding-bottom: 5px !important;
-				// box-shadow: inset 0 0 30px 0 @eh-children-shadow;
-				// border-bottom: 1px solid @- !important; .contrast(@global-background, 10%);
 
-				// highlight pseudo elements of selected node
-				> li .webkit-html-pseudo-element:first-child {
-					color: @xml-pseudo-highlighted !important;
-				}
 
-				// fade closing tag of parent
-				> :last-child * {
-					opacity: .6;
-				}
-			}
-		}
-	}
-}
+
+
+
+
+
+
+
+
+
+
+// .panel.elements {
+// 	/deep/ .parent {
+// 		// highlight children
+// 		&.selected.expanded + .children,
+// 		&.hovered.expanded + .children {
+// 			background-color: #323A43 !important;
+// 			padding-bottom: 5px !important;
+// 			box-shadow: inset 0 0 30px 0 @eh-children-shadow;
+// 			border-bottom: 1px solid @- !important; .contrast(@global-background, 10%);
+
+// 			// highlight pseudo elements of selected node
+// 			> li .webkit-html-pseudo-element:first-child {
+// 				color: @xml-pseudo-highlighted !important;
+// 			}
+
+// 			// fade closing tag of parent
+// 			> :last-child * {
+// 				opacity: .6;
+// 			}
+// 		}
+// 	}
+// }
+
+
+
+
+
+
+
+
+
+
+
 
 //**********************************************/
 //*  40.0.2199.1
@@ -535,23 +566,26 @@ body {
 ::shadow {
 	.crumbs {
 		text-shadow: none !important;
-		color: @crumb-text !important;
+		color: @global-text !important;
 
 		.crumb {
+			background: none !important;
 			-webkit-border-image: none !important;
-			& { border-left: 1px solid @- !important; .contrast(@global-background, 25%) };
-			& { border-right: 1px solid @- !important;.contrast(@global-background, 15%) };
 			padding: 0 10px !important;
 			margin: 0 !important;
 			line-height: 18px !important;
 
+			& + .crumb {
+				border-left: 1px solid @04;
+			}
+
 			&:hover {
 				color: @crumb-selected-text !important;
-				background-color: rgba(0,0,0,0) !important;
+				background: none !important;
 			}
 
 			&.selected {
-				background-color: @crumb-selected-background !important;
+				background: @crumb-selected-background !important;
 				text-shadow: none !important;
 				color: @crumb-selected-text !important;
 				cursor: default;
@@ -846,15 +880,17 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 
 ::shadow {
 
+	// Secondary tab bar
 	.tabbed-pane-header {
-		background: @tab-background-color !important;
-		// background-image: linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+		background: @tab-secondary-background-color !important;
+		border-bottom: none !important;
+	  flex: 0 0 21px;
 	}
 
-	//main nav tabs
 	.tabbed-pane-header-contents {
-		box-shadow: inset 0 1px 0 @-; .contrast(@tab-color-top,7%);
 		color: @tab-label !important;
+		margin: 0 !important;
+		padding-left: 0 !important;
 	}
 }
 
@@ -872,7 +908,7 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 	.tabbed-pane-header-contents {
 		.tabbed-pane-header-tab {
 			height: @tab-main-toolbar-height !important;
-			line-height: (.75*@tab-main-toolbar-height) !important;
+			line-height: (@tab-main-toolbar-height - 5) !important;
 		}
 	}
 }
@@ -893,6 +929,8 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 		border-image: none !important;
 		border: none !important;
 		cursor: pointer !important;
+		font-size: 11px !important;
+		margin: 0;
 		padding: 2px 8px !important;
 		width: auto !important;
 
@@ -903,7 +941,6 @@ body .inspector-view-tabbed-pane.tabbed-pane::shadow {
 		&.selected {
 			background: @tab-highlighted-background-color !important;
 			color: @tab-label-selected !important;
-			font-size: 1em;
 		}
 	}
 }
@@ -1104,12 +1141,12 @@ body .inspector-view-toolbar.status-bar::shadow .status-bar-item {
 
 // Editing Mode for CSS sidebars/ Snippets / Watch Expressions
 ::shadow style + .text-prompt-editing {
-	background-color: @global-background !important;
-	outline: 1px solid @global-accent !important;
+	background-color: @tab-background-color !important;
+	outline: none !important;
 }
 
 ::shadow .text-prompt-editing > ::content * {
-	color: @global-text !important;
+	color: @05 !important;
 }
 
 

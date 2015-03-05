@@ -4,13 +4,21 @@
 
 @theme-type: dark;
 
+@02: #65737E; // Slate
+@04: #A7ADBA;
+@05: #C0C5CE;
+@07: #EFF1F5; // grey
 @08: #BF616A; // red
 @09: #D08770; // orange
 @0B: #A3BE8C; // green
 
 // Global Settings
-@text-height      : 16px;
-@global-accent    : #89f5a2;
+@font-family      : Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-size        : 10px;
+@text-height      : 14px;
+
+// Colours
+@global-accent    : transparent;
 @global-arrow     : #8c8c8c;
 @global-background: #2B303B;
 @global-boxshadow : none;
@@ -18,7 +26,7 @@
 @global-hover     : lighten(@global-background, 5%);
 @global-input     : #111;
 @global-selected  : #323A43;
-@global-text      : #ccc;
+@global-text      : #65737E;
 @global-label     : #626262;
 @global-warn      : #db0;
 @global-error     : #ff5a5a;
@@ -28,7 +36,7 @@
 @js-atom      : #89f5a2;
 @js-attribute : #4e87bf;
 @js-builtin   : #8da6ce;
-@js-comment   : #676767;
+@js-comment   : @02;
 @js-def       : #49a6d2;
 @js-error     : #f8f8f8;
 @js-header    : #ff6400;
@@ -57,25 +65,25 @@
 
 // CSS
 @css-at-rule   : #b094bb;
-@css-atom      : #ccc;
-@css-builtin   : #ff9635;
-@css-comment   : #676767;
-@css-def       : #ff9635;
-@css-important : #f00;
+@css-atom      : @09;
+@css-builtin   : @08;
+@css-comment   : @02;
+@css-def       : @08;
+@css-important : @09;
 @css-meta      : #6aedff;
-@css-number    : #ccc;
-@css-operator  : #ccc;
-@css-property  : #6aedff;
-@css-qualifier : #ff9635;
-@css-string    : #e3b959;
-@css-string-2  : #ccc;
+@css-number    : @09;
+@css-operator  : @09;
+@css-property  : @09;
+@css-qualifier : @08;
+@css-string    : @0B;
+@css-string-2  : @0B;
 @css-tag       : #ff9635;
 @css-variable  : #ff9635;
 @css-variable-2: #ff9635;
 
 // HTML Highlighting
 @xml-attribute         : @09;
-@xml-comment           : #7c7c7c;
+@xml-comment           : @02;
 @xml-error             : #bf4c4c;
 @xml-iframe-root       : #db0;
 @xml-js-node           : #c2c3c3;
@@ -88,6 +96,7 @@
 
 // Tabbed Header Configuration
 @tab-background-color  : #1C1F26;
+@tab-secondary-background-color  : #232830;
 @tab-color-top      : lighten(@global-background, 18%);
 @tab-color-bottom   : lighten(@global-background, 8%);
 @tab-highlighted-background-color    : @global-background;
@@ -138,17 +147,18 @@
 @eh-base-color          : @global-selected;
 @eh-children-shadow     : darken(@global-background, 10%);
 @eh-editing-outline     : @global-accent;
-@eh-highlight-background: @selection-background;
+@eh-highlight-background: @tab-background-color;
 @eh-highlight-outline   : @selection-border;
 @eh-hover-background    : @hover-background;
 @eh-hover-outline       : @hover-border;
 @eh-clipboard-selection : lighten(@global-background, 40%);
 
 // Elements Sidebar
-@style-edit-mode-selector-text: #999;
-@style-selector-text          : #ccc;
+@style-edit-mode-selector-text: @global-text;
+@style-selector               : @07;
+@style-selector-text          : @04;
 @style-separator              : lighten(@global-background, 10%);
-@style-value                  : #ccc;
+@style-value                  : @04;
 
 // Filters
 @filter-background   : lighten(@global-background,5%);
