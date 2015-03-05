@@ -116,7 +116,7 @@ li.breakpoint-hit .breakpoint-hit-marker {
 .sidebar-pane-toolbar > .pane-title-button.refresh {
 	/*background-image: none !important;*/
 	-webkit-background-position: -24px 0 !important;
-	background-color: @glyph-inactive !important;
+	background-color: @sidebar-glyph-color !important;
 	-webkit-mask-repeat: no-repeat !important;
 }
 
@@ -243,10 +243,12 @@ li.breakpoint-hit .breakpoint-hit-marker {
 }
 
 .sidebar-pane-button-new-rule {
-	background-color: @- !important; .contrast(@global-background, 40%);
+	background-color: #fff;
 	background-image: none;
 	-webkit-mask-image: url(Images/paneAddButtons.png) !important;
 	-webkit-mask-position: 0 0 !important;
+  right: -8px;
+  bottom: 4px;
 
 	&:hover {
 		-webkit-mask-position: -23px 0 !important;

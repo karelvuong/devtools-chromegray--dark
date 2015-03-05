@@ -89,13 +89,16 @@
 	}
 }
 
+.styles-section .selector {color:@style-selector!important;}
+.styles-section-subtitle {color:@style-subtitle!important;}
+
 .styles-section.first-styles-section,
 .sidebar-separator + .styles-section {
  border-top: none !important;
 }
 
 .sidebar-separator {
-	background-image: -webkit-linear-gradient(@tab-color-top, @tab-color-bottom) !important;
+	background-color: @style-separator !important;
 	color: @style-selector-text !important;
 	text-shadow: none !important;
 	border-top: none !important;

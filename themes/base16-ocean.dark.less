@@ -4,9 +4,15 @@
 
 @theme-type: dark;
 
+@01: #2B303B;
 @02: #65737E; // Slate
 @04: #A7ADBA;
 @05: #C0C5CE;
+
+
+@06: @07;
+
+
 @07: #EFF1F5; // grey
 @08: #BF616A; // red
 @09: #D08770; // orange
@@ -23,7 +29,7 @@
 @global-background: #2B303B;
 @global-boxshadow : none;
 @global-divider   : lighten(@global-background, 5%);
-@global-hover     : lighten(@global-background, 5%);
+@global-hover     : #323A43;
 @global-input     : #111;
 @global-selected  : #323A43;
 @global-text      : #65737E;
@@ -90,7 +96,7 @@
 @xml-link              : @0B;
 @xml-pseudo            : #49a5d2;
 @xml-pseudo-highlighted: #a6371a;
-@xml-shadow-root       : #db0;
+@xml-shadow-root       : @02;
 @xml-string            : @0B;
 @xml-tag               : @08;
 
@@ -155,7 +161,8 @@
 
 // Elements Sidebar
 @style-edit-mode-selector-text: @global-text;
-@style-selector               : @07;
+@style-subtitle               : @07;
+@style-selector               : @06;
 @style-selector-text          : @04;
 @style-separator              : lighten(@global-background, 10%);
 @style-value                  : @04;
@@ -201,6 +208,10 @@
 @sb-thumb-border   : @global-background;
 @sb-thumb-color    : #4F5B66;
 @sb-thumb-roundness: 0;
+
+
+@sidebar-glyph-color: #fff;
+
 
 // Settings
 @settings-background       : #444;
