@@ -10,7 +10,7 @@ Chromegray is built on LESS. Grunt is used to listen for changes to LESS files a
 
 ## Getting Started
 
-1. Clone this repo: `git clone https://github.com/mauricecruz/zero-base-themes.git`.
+1. Clone this repo: `git clone https://github.com/karelvuong/devtools-chromegray--dark.git`.
 2. Install dependencies: `npm install`.
 3. To use an existing theme: `grunt`. (If you're going to work on your own theme: `grunt watch` to listen for changes).
 4. `Chrome > Preferences... > Extensions > DevTools Theme: Zero Dark Matrix = Enabled` (also enable `Allow incognito` below if you wish).
