@@ -1,9 +1,9 @@
 {
-	"name": "DevTools Theme: Zero Dark Matrix",
+	"name": "DevTools Theme: Chromegray Dark",
 	"version": "1.5.2",
-	"description": "A highly customized dark theme for Devtools.",
+	"description": "A theme for Chrome Developer Tools based on @kkga's Spacegray.",
 	"devtools_page": "devtools.html",
-	"homepage_url": "https://github.com/mauricecruz/chrome-devtools-zerodarkmatrix-theme",
+	"homepage_url": "https://github.com/karelvuong/devtools-chromegray--dark",
 	"manifest_version": 2,
 	"icons": {
 		"16": "images/icon16.png",
