@@ -1,14 +1,14 @@
 {
-  "name": "zero-base-themes",
-  "version": "0.0.1",
-  "description": "Chrome Devtools themes using the Zero-Base Template",
+  "name": "Chromegray (Dark)",
+  "version": "1.0.0",
+  "description": "A theme for Chrome Developer Tools based on @kkga's Spacegray.",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mauricecruz/zero-base-themes.git"
+    "url": "https://github.com/karelvuong/debtools-chromegray--dark.git"
   },
   "author": "Maurice Cruz",
-  "license": "https://github.com/mauricecruz/zero-base-themes/blob/master/LICENSE",
+  "license": "httpshttps://github.com/karelvuong/devtools-chromegray--dark/blob/master/LICENSE",
   "devDependencies": {
     "grunt-contrib-less": "^0.11.4",
     "grunt-contrib-watch": "~0.5.3",
