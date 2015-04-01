@@ -1,6 +1,6 @@
 {
 	"name": "DevTools Theme: Chromegray Dark",
-	"version": "1.5.2",
+	"version": "1.0.0",
 	"description": "A theme for Chrome Developer Tools based on @kkga's Spacegray.",
 	"devtools_page": "devtools.html",
 	"homepage_url": "https://github.com/karelvuong/devtools-chromegray--dark",
